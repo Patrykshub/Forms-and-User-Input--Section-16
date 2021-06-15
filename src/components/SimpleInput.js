@@ -11,6 +11,12 @@ const SimpleInput = (props) => {
   const formSubmissionHandler = (event) => {
     event.preventDefault();
 
+    if (enteredName === '') {
+      alert('Please enter your name');
+      return;
+    }
+
+
     console.log(enteredName);
     const enteredValue = nameInputRef.current.value;
     console.log(enteredValue);
